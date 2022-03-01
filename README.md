@@ -1,4 +1,4 @@
-#Team 1 Kolbászolók Java Project
+# Team 1 Kolbászolók Java Project
 
 ## Members:
 

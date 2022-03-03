@@ -5,6 +5,8 @@ import org.apache.commons.collections4.CollectionUtils;
 
 import lombok.NoArgsConstructor;
 import org.apache.commons.collections4.CollectionUtils;
+
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +18,7 @@ import static lombok.AccessLevel.PRIVATE;
 public class AbsoluteCalculatorUtil {
     public static List<Integer> absoluteNumbers(List <Integer> numbers) {
         if (CollectionUtils.isEmpty(numbers)) {
-            return null;
+            return Collections.emptyList();
         }
         // obtaining a list of unique absolute numbers
         // change negative into positives

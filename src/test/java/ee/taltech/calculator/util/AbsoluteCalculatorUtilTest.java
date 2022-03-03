@@ -13,8 +13,8 @@ public class AbsoluteCalculatorUtilTest {
     @Test
     @DisplayName("Absolut result is null or empty")
     void absolutIsNullOrEmpty(){
-        assertNull(AbsoluteCalculatorUtil.absoluteNumbers(null));
-        assertNull(AbsoluteCalculatorUtil.absoluteNumbers(List.of()));
+        assertEquals(List.of(), AbsoluteCalculatorUtil.absoluteNumbers(null));
+        assertEquals(List.of(), AbsoluteCalculatorUtil.absoluteNumbers(List.of()));
     }
 
     @Test

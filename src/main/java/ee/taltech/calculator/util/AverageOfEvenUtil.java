@@ -9,7 +9,14 @@ import static lombok.AccessLevel.PRIVATE;
 @NoArgsConstructor(access = PRIVATE)
 public class AverageOfEvenUtil {
     public static Double averageOfEven(List<Integer> numbers){
-        //todo
-        return null;
+        if(numbers == null  || numbers.isEmpty()){
+            return null;
+        }
+
+        return numbers.stream()
+                .mapToDouble(d -> d)
+                .filter(i -> i > 0)
+                .average()
+                .orElse(0.0);
     }
 }

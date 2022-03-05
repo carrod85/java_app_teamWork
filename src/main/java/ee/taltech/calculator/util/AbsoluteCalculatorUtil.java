@@ -14,7 +14,7 @@ import static lombok.AccessLevel.PRIVATE;
 public class AbsoluteCalculatorUtil {
     public static List<Integer> absoluteNumbers(List <Integer> numbers) {
         if (CollectionUtils.isEmpty(numbers)) {
-            return Collections.emptyList();
+            return null;
         }
         // obtaining a list of unique absolute numbers
         // change negative into positives

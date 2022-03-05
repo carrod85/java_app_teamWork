@@ -42,4 +42,6 @@ class Calculate1ControllerTest {
                 .andExpect(jsonPath("$.sum").value(6))
                 .andExpect(jsonPath("$.absolute").value(Lists.newArrayList(0,1,4,8,9)));//value(List.of(0,1,4,8,9)));//value((0,1,4,8,9)));
     }
+
+
 }

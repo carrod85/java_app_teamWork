@@ -2,6 +2,7 @@ package ee.taltech.calculator.util;
 
 import lombok.NoArgsConstructor;
 
+import java.util.Collections;
 import java.util.List;
 
 import static lombok.AccessLevel.PRIVATE;
@@ -13,9 +14,10 @@ public class AverageOfEvenUtil {
             return null;
         }
 
+
         return numbers.stream()
                 .mapToDouble(d -> d)
-                .filter(i -> i > 0)
+                .filter(i -> i >= 0)
                 .average()
                 .orElse(0.0);
     }

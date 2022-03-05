@@ -13,8 +13,8 @@ import static lombok.AccessLevel.PRIVATE;
 public class PositivesCalculatorUtil {
     public static List<Integer> positiveNumbers(List<Integer> numbers){
         if (CollectionUtils.isEmpty(numbers)) {
-            return Collections.emptyList();
+            return null;
         }
-        return numbers.stream().filter(i -> i > 0).distinct().sorted().collect(Collectors.toList());
+        return numbers.stream().filter(i -> i >= 0).distinct().sorted().collect(Collectors.toList());
     }
 }

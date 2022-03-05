@@ -34,11 +34,17 @@ public class Calculate2ControllerTest {
     @Test
     @DisplayName("request with list of values, returns the correct results")
     void calcTest() throws Exception{
-        mvc.perform(get("/calculator/calculate1?numbers=1,-4,-8,8,9,0"))
+        mvc.perform(get("/calculator/calculate2?numbers=1,-4,-8,8,9,0"))
                 .andExpect(status().is2xxSuccessful())
                 .andExpect(jsonPath("$.positives").value(Lists.newArrayList(0, 1, 8, 9)))
-                .andExpect(jsonPath("$.absolutes").value(Lists.newArrayList(0,1,4,8,9)));
-                /* todo
-                .andExpect(jsonPath("$.averageOfEven").value()); */
+                .andExpect(jsonPath("$.absolutes").value(Lists.newArrayList(0,1,4,8,9)))
+                .andExpect(jsonPath("$.averageOfEven").value(4.5)); ;
+
     }
+
+
+
+
+
+
 }

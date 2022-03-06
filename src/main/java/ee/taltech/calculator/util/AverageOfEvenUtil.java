@@ -2,7 +2,6 @@ package ee.taltech.calculator.util;
 
 import lombok.NoArgsConstructor;
 
-import java.util.Collections;
 import java.util.List;
 
 import static lombok.AccessLevel.PRIVATE;
@@ -13,6 +12,13 @@ public class AverageOfEvenUtil {
         if(numbers == null  || numbers.isEmpty()){
             return null;
         }
+        /* I think it should be like this.
+        return numbers.stream()
+                .mapToDouble(d -> d)
+                .filter(i -> i % 2 == 0)
+                .average()
+                .orElse(0.0)
+         */
 
 
         return numbers.stream()

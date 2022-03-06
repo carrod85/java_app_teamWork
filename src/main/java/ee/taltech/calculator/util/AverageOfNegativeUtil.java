@@ -3,6 +3,7 @@ package ee.taltech.calculator.util;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static lombok.AccessLevel.PRIVATE;
 
@@ -18,6 +19,6 @@ public class AverageOfNegativeUtil {
                 .mapToDouble(d -> d)
                 .filter(i -> i < 0)
                 .average()
-                .getAsDouble();
+                .orElse(0.0);
     }
 }

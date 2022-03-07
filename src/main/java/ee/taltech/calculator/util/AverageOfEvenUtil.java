@@ -12,18 +12,11 @@ public class AverageOfEvenUtil {
         if(numbers == null  || numbers.isEmpty()){
             return null;
         }
-        /* I think it should be like this.
+
+
         return numbers.stream()
                 .mapToDouble(d -> d)
                 .filter(i -> i % 2 == 0)
-                .average()
-                .orElse(0.0)
-         */
-
-
-        return numbers.stream()
-                .mapToDouble(d -> d)
-                .filter(i -> i >= 0)
                 .average()
                 .orElse(0.0);
     }

@@ -38,7 +38,7 @@ public class Calculate2ControllerTest {
                 .andExpect(status().is2xxSuccessful())
                 .andExpect(jsonPath("$.positives").value(Lists.newArrayList(0, 1, 8, 9)))
                 .andExpect(jsonPath("$.absolutes").value(Lists.newArrayList(0,1,4,8,9)))
-                .andExpect(jsonPath("$.averageOfEven").value(4.5)); ;
+                .andExpect(jsonPath("$.averageOfEven").value(-1)); ;
 
     }
 

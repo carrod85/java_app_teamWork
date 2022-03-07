@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SumCalculatorUtilTest {
+class SumCalculatorUtilTest {
     @Test
     @DisplayName("sum of null or empty list is null")
     void SumOfIntegerIsNullOrEmpty(){

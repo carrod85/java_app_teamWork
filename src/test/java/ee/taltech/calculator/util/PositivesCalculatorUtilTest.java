@@ -6,14 +6,15 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
-public class PositivesCalculatorUtilTest {
+class PositivesCalculatorUtilTest {
 
     @Test
     @DisplayName("Positives result null or empty")
     void positivesIsNullOrEmpty(){
-        assertEquals(List.of(), PositivesCalculatorUtil.positiveNumbers(null));
-        assertEquals(List.of(), PositivesCalculatorUtil.positiveNumbers(List.of()));
+        assertNull(PositivesCalculatorUtil.positiveNumbers(null));
+        assertNull(PositivesCalculatorUtil.positiveNumbers(List.of()));
     }
 
     @Test

@@ -7,13 +7,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class EvenCalculatorUtilTest {
+class EvenCalculatorUtilTest {
 
     @Test
     @DisplayName("Even result is null or empty")
     void evenResultNullOrEmpty(){
-        assertEquals(List.of(), EvenCalculatorUtil.evenNumbers(null));
-        assertEquals(List.of(), EvenCalculatorUtil.evenNumbers(List.of()));
+        assertNull(EvenCalculatorUtil.evenNumbers(null));
+        assertNull(EvenCalculatorUtil.evenNumbers(List.of()));
 
 
     }

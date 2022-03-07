@@ -12,12 +12,12 @@ public class AverageOfEvenUtil {
         if(numbers == null  || numbers.isEmpty()){
             return null;
         }
-
-
-        return numbers.stream()
+        double avg =numbers.stream()
                 .mapToDouble(d -> d)
                 .filter(i -> i % 2 == 0)
                 .average()
-                .orElse(0.0);
+                .orElse(0);
+
+        return (double) Math. round(avg * 100) / 100;
     }
 }

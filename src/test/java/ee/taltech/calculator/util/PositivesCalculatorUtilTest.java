@@ -20,6 +20,6 @@ public class PositivesCalculatorUtilTest {
     @DisplayName("Positives result is correct")
     void positivesRealTest(){
         assertEquals(List.of(3, 4, 29, 325), PositivesCalculatorUtil.positiveNumbers(List.of(4, 3, -29, 29, -23, 4, 325)));
-        assertEquals(List.of(1, 4), PositivesCalculatorUtil.positiveNumbers(List.of(-5, 4, 1, -15, 0, 0 )));
+        assertEquals(List.of(0, 1, 4), PositivesCalculatorUtil.positiveNumbers(List.of(-5, 4, 1, -15, 0, 0 )));
     }
 }

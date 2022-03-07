@@ -12,8 +12,9 @@ public class EvenCalculatorUtilTest {
     @Test
     @DisplayName("Even result is null or empty")
     void evenResultNullOrEmpty(){
-        assertNull(EvenCalculatorUtil.evenNumbers(null));
-        assertNull(EvenCalculatorUtil.evenNumbers(List.of()));
+        assertEquals(List.of(), EvenCalculatorUtil.evenNumbers(null));
+        assertEquals(List.of(), EvenCalculatorUtil.evenNumbers(List.of()));
+
 
     }
 

@@ -15,10 +15,12 @@ public class AverageOfNegativeUtil {
         }
 
 
-        return numbers.stream()
+        double avg = numbers.stream()
                 .mapToDouble(d -> d)
                 .filter(i -> i < 0)
                 .average()
-                .orElse(0.0);
+                .orElse(0);
+
+        return (double) Math. round(avg * 100) / 100;
     }
 }
